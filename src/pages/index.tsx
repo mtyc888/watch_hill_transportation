@@ -201,16 +201,16 @@ export default function Home() {
           </FadeIn>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-cream to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-linear-to-t from-cream to-transparent" />
 
         <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-          <div className="w-px h-10 md:h-12 bg-gradient-to-b from-white/30 to-transparent animate-pulse" />
+          <div className="w-px h-10 md:h-12 bg-linear-to-b from-white/30 to-transparent animate-[pulse_1s_ease-in-out_infinite]" />
         </div>
       </section>
 
       {/* ── LOCATION MARQUEE ── */}
       <section className="bg-cream overflow-hidden py-4 md:py-5 border-b border-border">
-        <div className="flex animate-[marquee_40s_linear_infinite] whitespace-nowrap">
+        <div className="flex animate-[marquee_25s_linear_infinite] whitespace-nowrap">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span
               key={i}
@@ -235,8 +235,8 @@ export default function Home() {
       </section>
 
       {/* ── INTRO ── */}
-      <section className="py-16 md:py-[100px] px-6 md:px-8 bg-cream">
-        <div className="max-w-[900px] mx-auto text-center">
+      <section className="py-16 md:py-25 px-6 md:px-8 bg-cream">
+        <div className="max-w-225 mx-auto text-center">
           <FadeIn>
             <p className="font-body text-[11px] tracking-widest2 uppercase text-sand mb-4 md:mb-6 font-light">
               Welcome

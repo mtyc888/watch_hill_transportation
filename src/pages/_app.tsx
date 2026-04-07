@@ -19,7 +19,7 @@ const outfit = Outfit({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${cormorant.variable} ${outfit.variable}`}>
+    <div className={`${cormorant.variable} ${outfit.variable} overflow-x-hidden`}>
       <Nav />
       <Component {...pageProps} />
       <Footer />

@@ -19,7 +19,7 @@ const outfit = Outfit({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${cormorant.variable} ${outfit.variable} max-w-[100vw] overflow-x-clip`}>
+    <div className={`${cormorant.variable} ${outfit.variable} max-w-full overflow-x-clip`}>
       <Nav />
       <Component {...pageProps} />
       <Footer />

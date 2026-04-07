@@ -120,15 +120,18 @@ export default function Home() {
           className="absolute inset-0 w-full h-[120%] -top-[10%]"
           style={{ transform: `translateY(${scrollY * 0.25}px)` }}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/videos/hero.mp4" type="video/mp4" />
-          </video>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/images/hero-poster.jpg"
+          className="w-full h-full object-cover"
+        >
+          <source src="/videos/hero-mobile.mp4" type="video/mp4" media="(max-width: 768px)" />
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
         </div>
 
         <div className="absolute inset-0 bg-navy-deep/40" />

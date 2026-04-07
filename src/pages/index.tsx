@@ -136,19 +136,22 @@ export default function Home() {
 
         <div className="relative z-10 text-center max-w-[900px] px-6 md:px-8">
           <h1 className="sr-only">Watch Hill Transportation</h1>
-          {/* Company name — mobile only */}
+
+          {/* Logo + mobile company name lockup */}
           <FadeIn>
-            <p className="md:hidden font-display text-[20px] font-bold tracking-wider text-white mb-4">
-              <span>WATCH HILL</span>{" "}
-              <span className="text-white/80">TRANSPORTATION</span>
-            </p>
-          </FadeIn>
-          <FadeIn>
-            <div className="mb-6 md:mb-10">
-              <div className="w-16 h-16 md:w-24 md:h-24 mx-auto rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm bg-white/5">
-                <span className="font-display text-2xl md:text-4xl text-white/90 font-light">
+            <div className="mb-6 md:mb-10 flex flex-col items-center">
+              <div className="w-14 h-14 md:w-24 md:h-24 mx-auto rounded-full border border-white/15 flex items-center justify-center backdrop-blur-sm bg-white/5 mb-4 md:mb-0">
+                <span className="font-display text-xl md:text-4xl text-white/90 font-light">
                   W
                 </span>
+              </div>
+              {/* Mobile company name */}
+              <div className="md:hidden flex items-center gap-3 mt-1">
+                <div className="h-px w-6 bg-white/20" />
+                <p className="font-body text-[10px] tracking-widest3 uppercase text-white/50 font-light">
+                  Watch Hill Transportation
+                </p>
+                <div className="h-px w-6 bg-white/20" />
               </div>
             </div>
           </FadeIn>
@@ -177,7 +180,7 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <p className="font-body text-[15px] md:text-[17px] text-white/70 leading-relaxed max-w-[520px] mx-auto mb-8 md:mb-14 font-light">
+            <p className="font-body text-[14px] md:text-[17px] text-white/70 leading-relaxed max-w-[520px] mx-auto mb-8 md:mb-14 font-light">
               Travel confidently with premium vehicles and experienced,
               licensed and insured drivers at your service.
             </p>
@@ -192,7 +195,7 @@ export default function Home() {
               <span className="hidden sm:inline">Call or Text 401-622-2834</span>
               <span className="sm:hidden">401-622-2834</span>
             </a>
-            <p className="font-body text-[12px] text-white/40 font-light tracking-wide mt-3 md:mt-5">
+            <p className="font-body text-[11px] md:text-[12px] text-white/40 font-light tracking-wide mt-3 md:mt-5">
               For an instant quote
             </p>
           </FadeIn>

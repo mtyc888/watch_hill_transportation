@@ -136,7 +136,13 @@ export default function Home() {
 
         <div className="relative z-10 text-center max-w-[900px] px-6 md:px-8">
           <h1 className="sr-only">Watch Hill Transportation</h1>
-
+          {/* Company name — mobile only */}
+          <FadeIn>
+            <p className="md:hidden font-display text-[20px] font-bold tracking-wider text-white mb-4">
+              <span>WATCH HILL</span>{" "}
+              <span className="text-white/80">TRANSPORTATION</span>
+            </p>
+          </FadeIn>
           <FadeIn>
             <div className="mb-6 md:mb-10">
               <div className="w-16 h-16 md:w-24 md:h-24 mx-auto rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm bg-white/5">

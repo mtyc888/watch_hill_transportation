@@ -244,7 +244,7 @@ export default function ServiceLayout({
             alt={title}
             fill
             className={`object-cover transition-transform duration-[1.8s] ease-out ${
-              heroLoaded ? "scale-100" : "scale-110"
+              heroLoaded ? "scale-105" : "scale-100"
             }`}
             priority
           />

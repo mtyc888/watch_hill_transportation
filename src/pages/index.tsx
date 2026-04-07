@@ -50,26 +50,31 @@ const services = [
     icon: <PlaneIcon className="text-navy" size={28} />,
     label: "Airport Transfer",
     brief: "Seamless pickups from T.F. Green, Logan & JFK",
+    href: "/services/airport-transfer",
   },
   {
     icon: <CarIcon className="text-navy" size={28} />,
     label: "Private Charter",
     brief: "A dedicated vehicle & driver, wherever you need",
+    href: "/services/private-charter",
   },
   {
     icon: <ClockIcon className="text-navy" size={28} />,
     label: "Hourly Chauffeur",
     brief: "Flexible by-the-hour service on your schedule",
+    href: "/services/chauffeur-hourly",
   },
   {
     icon: <HeartIcon className="text-navy" size={28} />,
     label: "Wedding",
     brief: "Arrive at your big day in unforgettable style",
+    href: "/services/wedding",
   },
   {
     icon: <ZapIcon className="text-navy" size={28} />,
     label: "Last Minute",
     brief: "Plans changed? We're ready. Same-day available",
+    href: "/services/last-minute",
   },
 ];
 
@@ -296,7 +301,7 @@ export default function Home() {
         <div className="max-w-[1000px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {services.map((s, i) => (
             <FadeIn key={i} delay={i * 0.08}>
-              <Link href="/services" className="no-underline group">
+              <Link href={s.href} className="no-underline group">
                 <div className="bg-white border border-border p-6 md:p-8 transition-all duration-400 hover:border-navy/20 hover:shadow-lg cursor-pointer group-hover:-translate-y-1">
                   <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
                     <div className="w-10 h-10 md:w-11 md:h-11 rounded-full bg-cream-warm flex items-center justify-center shrink-0 transition-colors group-hover:bg-navy/5">

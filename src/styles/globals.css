@@ -34,7 +34,9 @@
 }
 
 @layer base {
-  html {
+  html,
+  body {
+    overflow-x: hidden;
     scroll-behavior: smooth;
   }
 
@@ -69,10 +71,4 @@
   margin-left: auto;
   margin-right: auto;
   background: linear-gradient(90deg, transparent, var(--color-sand), transparent);
-}
-
-@layer base {
-  html, body {
-    overflow-x: hidden;
-  }
 }

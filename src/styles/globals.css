@@ -70,3 +70,9 @@
   margin-right: auto;
   background: linear-gradient(90deg, transparent, var(--color-sand), transparent);
 }
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+  }
+}

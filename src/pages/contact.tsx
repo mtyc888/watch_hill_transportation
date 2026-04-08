@@ -182,7 +182,7 @@ export default function Contact() {
                         <label className={labelClasses}>Phone</label>
                         <input
                           className={inputClasses}
-                          placeholder="+1 (401) 555-0123"
+                          placeholder="+1 (401) 622-2834"
                           value={form.phone}
                           onChange={(e) =>
                             setForm({ ...form, phone: e.target.value })

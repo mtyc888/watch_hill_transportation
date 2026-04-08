@@ -67,54 +67,20 @@ interface Vehicle {
 
 const vehicles: Vehicle[] = [
   {
-    name: "Cadillac Escalade ESV",
+    name: "Chevrolet Suburban",
     type: "Premium SUV",
-    passengers: 6,
-    luggage: 6,
-    image: "/images/fleet/escalade.jpg",
+    passengers: 7,
+    luggage: 4,
+    image: "/images/fleet/suburban.jpg",
     description:
-      "The flagship of our fleet. Spacious, commanding, and finished in black, the Escalade ESV is perfect for airport transfers, corporate travel, or any occasion that calls for a premium ride.",
+      "Spacious, comfortable, and built for any occasion. The Suburban offers generous seating for up to seven passengers with plenty of room for luggage. Whether it's an airport run, a night out, or a wedding, this is the ride that gets it done in style.",
     features: [
       "Leather interior",
       "Climate controlled",
-      "Complimentary water",
-      "USB & wireless charging",
-      "Privacy partition available",
-      "Extra luggage capacity",
-    ],
-  },
-  {
-    name: "Lincoln Continental",
-    type: "Executive Sedan",
-    passengers: 3,
-    luggage: 3,
-    image: "/images/fleet/continental.jpg",
-    description:
-      "Refined and understated. The Continental delivers a smooth, quiet ride with generous rear legroom, ideal for business travel, date nights, or intimate airport pickups.",
-    features: [
-      "Leather interior",
-      "Rear climate control",
       "Complimentary water",
       "USB charging ports",
-      "Quiet cabin",
-      "Trunk space for luggage",
-    ],
-  },
-  {
-    name: "Mercedes-Benz Sprinter",
-    type: "Executive Van",
-    passengers: 12,
-    luggage: 12,
-    image: "/images/fleet/sprinter.jpg",
-    description:
-      "When the group is bigger, the Sprinter delivers. Perfect for wedding parties, corporate groups, or airport runs with the whole crew. Comfortable seating and plenty of room for luggage.",
-    features: [
-      "Spacious cabin",
-      "Forward-facing seating",
-      "Overhead storage",
-      "Climate controlled",
-      "Complimentary water",
-      "ADA accessible options",
+      "Third-row seating",
+      "Extra luggage capacity",
     ],
   },
 ];
@@ -150,9 +116,9 @@ export default function Fleet() {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-linear-to-t from-navy-deep via-navy-deep/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
 
-        <div className="relative z-10 w-full max-w-300 mx-auto px-6 md:px-8 pb-10 md:pb-16 pt-32 md:pt-40">
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 md:px-8 pb-10 md:pb-16 pt-32 md:pt-40">
           <div className="overflow-hidden mb-2 md:mb-3">
             <p
               className={`font-body text-[11px] tracking-widest3 uppercase text-sand-light/70 font-light transition-transform duration-[1s] ease-[cubic-bezier(0.16,1,0.3,1)] delay-200 ${
@@ -175,7 +141,7 @@ export default function Fleet() {
 
           <div className="overflow-hidden">
             <p
-              className={`font-body text-[15px] md:text-[17px] text-white/60 font-light max-w-125 leading-relaxed transition-transform duration-[1s] ease-[cubic-bezier(0.16,1,0.3,1)] delay-500 ${
+              className={`font-body text-[15px] md:text-[17px] text-white/60 font-light max-w-[500px] leading-relaxed transition-transform duration-[1s] ease-[cubic-bezier(0.16,1,0.3,1)] delay-500 ${
                 heroLoaded ? "translate-y-0" : "translate-y-full"
               }`}
             >
@@ -192,26 +158,26 @@ export default function Fleet() {
       </section>
 
       {/* ═══ FLEET PROMISE ═══ */}
-      <section className="py-16 md:py-20 px-6 md:px-8 bg-cream">
-        <div className="max-w-225 mx-auto text-center">
+      <section className="py-16 md:py-[80px] px-6 md:px-8 bg-cream">
+        <div className="max-w-[900px] mx-auto text-center">
           <Reveal>
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-px w-8 bg-sand/50" />
               <div className="w-1 h-1 rounded-full bg-sand" />
               <div className="h-px w-8 bg-sand/50" />
             </div>
-            <p className="font-body text-[14px] md:text-base text-txt-muted leading-[1.9] font-light max-w-160 mx-auto">
-              Our vehicles are selected for comfort, reliability, and
-              presentation. Every car is cleaned and inspected before each trip
-              so you always step into a spotless ride.
+            <p className="font-body text-[14px] md:text-base text-txt-muted leading-[1.9] font-light max-w-[640px] mx-auto">
+              Our fleet is growing. Every vehicle is selected for comfort,
+              reliability, and presentation, and cleaned before each trip so you
+              always step into a spotless ride.
             </p>
           </Reveal>
         </div>
       </section>
 
       {/* ═══ VEHICLES ═══ */}
-      <section className="pb-16 md:pb-25 px-6 md:px-8 bg-cream">
-        <div className="max-w-300 mx-auto flex flex-col gap-20 md:gap-28">
+      <section className="pb-16 md:pb-[100px] px-6 md:px-8 bg-cream">
+        <div className="max-w-[1200px] mx-auto flex flex-col gap-20 md:gap-28">
           {vehicles.map((v, i) => {
             const isReversed = i % 2 !== 0;
             return (
@@ -223,7 +189,7 @@ export default function Fleet() {
               >
                 {/* Image */}
                 <Reveal from={isReversed ? "right" : "left"} delay={0.1}>
-                  <div className="relative aspect-16/10 overflow-hidden lg:[direction:ltr]">
+                  <div className="relative aspect-[16/10] overflow-hidden lg:[direction:ltr]">
                     <Image
                       src={v.image}
                       alt={v.name}
@@ -299,7 +265,7 @@ export default function Fleet() {
       </section>
 
       {/* ═══ CTA ═══ */}
-      <section className="py-16 md:py-25 px-6 md:px-8 bg-navy-deep text-center relative overflow-hidden">
+      <section className="py-16 md:py-[100px] px-6 md:px-8 bg-navy-deep text-center relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -315,7 +281,7 @@ export default function Fleet() {
             <h2 className="font-display text-[clamp(24px,4vw,44px)] font-light text-white mb-3">
               Book Your Ride
             </h2>
-            <p className="font-body text-[14px] text-white/50 font-light mb-10 max-w-110 mx-auto">
+            <p className="font-body text-[14px] text-white/50 font-light mb-10 max-w-[440px] mx-auto">
               Call or text to reserve your vehicle. We&apos;ll match you with the right car for your trip.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -333,7 +299,7 @@ export default function Fleet() {
                 <GoldButton
                   as="span"
                   variant="outline"
-                  className="text-sand-light! border-sand-light/40! hover:border-sand-light! hover:text-white!"
+                  className="!text-sand-light !border-sand-light/40 hover:!border-sand-light hover:!text-white"
                 >
                   Send a Message
                 </GoldButton>

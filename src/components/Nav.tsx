@@ -64,13 +64,13 @@ export default function Nav() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+          className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 overflow-x-clip ${
           scrolled
             ? "bg-cream/95 backdrop-blur-md border-b border-border py-3.5 shadow-sm"
             : "bg-transparent border-b border-transparent py-5"
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-8 flex items-center justify-between">
+        <div className="max-w-300 mx-auto px-8 flex items-center justify-between">
           <Link href="/" className="no-underline hidden md:inline">
             <span className="font-display text-[24px] font-bold tracking-wider transition-colors duration-400">
               <span className={scrolled ? "text-navy" : "text-white"}>

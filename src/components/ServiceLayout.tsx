@@ -239,19 +239,19 @@ export default function ServiceLayout({
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-[50vh] md:min-h-[70vh] flex items-end overflow-hidden bg-navy-deep">
         <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src={heroImage}
-            alt={title}
-            fill
-            className={`object-cover transition-transform duration-[1.8s] ease-out ${
-              heroLoaded ? "scale-100" : "scale-110"
-            }`}
-            priority
-          />
+        <Image
+          src={heroImage}
+          alt={title}
+          fill
+          className="object-cover"
+          priority
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRm knyJckliyjqTzSlKQi//Z"
+        />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy-deep via-navy-deep/40 to-transparent" />
 
-        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 md:px-8 pb-10 md:pb-16 pt-32 md:pt-40">
+        <div className="relative z-10 w-full max-w-300 mx-auto px-6 md:px-8 pb-10 md:pb-16 pt-32 md:pt-40">
           <div
             className={`text-sand-light mb-3 md:mb-4 transition-all duration-700 delay-200 ${
               heroLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -262,7 +262,7 @@ export default function ServiceLayout({
 
           <div className="overflow-hidden mb-2 md:mb-3">
             <h1
-              className={`font-display text-[clamp(32px,7vw,80px)] font-light text-white leading-[1.05] transition-transform duration-[1s] ease-[cubic-bezier(0.16,1,0.3,1)] delay-300 ${
+              className={`font-display text-[clamp(32px,7vw,80px)] font-light text-white leading-[1.05] transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] delay-300 ${
                 heroLoaded ? "translate-y-0" : "translate-y-full"
               }`}
             >
@@ -272,7 +272,7 @@ export default function ServiceLayout({
 
           <div className="overflow-hidden">
             <p
-              className={`font-body text-[15px] md:text-[17px] text-white/60 font-light max-w-[500px] leading-relaxed transition-transform duration-[1s] ease-[cubic-bezier(0.16,1,0.3,1)] delay-500 ${
+              className={`font-body text-[15px] md:text-[17px] text-white/60 font-light max-w-125 leading-relaxed transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] delay-500 ${
                 heroLoaded ? "translate-y-0" : "translate-y-full"
               }`}
             >
@@ -289,8 +289,8 @@ export default function ServiceLayout({
       </section>
 
       {/* ═══ INTRO SPLIT ═══ */}
-      <section className="py-16 md:py-[100px] px-6 md:px-8 bg-cream overflow-hidden">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
+      <section className="py-16 md:py-25 px-6 md:px-8 bg-cream overflow-hidden">
+        <div className="max-w-300 mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
           <Reveal from="left">
             <div>
               <span className="inline-block font-body text-[11px] tracking-widest2 uppercase text-sand font-light mb-5 md:mb-6 relative after:content-[''] after:absolute after:left-[calc(100%+12px)] after:top-1/2 after:w-8 after:h-px after:bg-sand/50">
@@ -299,7 +299,7 @@ export default function ServiceLayout({
               <h2 className="font-display text-[clamp(24px,3.5vw,42px)] font-light text-navy leading-snug mb-6 md:mb-8">
                 {title}
               </h2>
-              <p className="font-body text-[14px] md:text-[15px] text-txt-muted leading-[2] font-light">
+              <p className="font-body text-[14px] md:text-[15px] text-txt-muted leading-loose font-light">
                 {intro}
               </p>
 
@@ -336,7 +336,7 @@ export default function ServiceLayout({
 
           <Reveal from="right" delay={0.15}>
             <div className="relative overflow-hidden">
-              <div className="relative aspect-[4/3] lg:aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-4/3 lg:aspect-3/4 overflow-hidden">
                 <Image
                   src={contentImage}
                   alt={`${title} service`}
@@ -357,8 +357,8 @@ export default function ServiceLayout({
       </section>
 
       {/* ═══ FEATURES — BENTO GRID ═══ */}
-      <section className="py-16 md:py-[100px] px-6 md:px-8 bg-white overflow-hidden">
-        <div className="max-w-[1100px] mx-auto">
+      <section className="py-16 md:py-25 px-6 md:px-8 bg-white overflow-hidden">
+        <div className="max-w-275 mx-auto">
           <Reveal from="bottom">
             <div className="mb-10 md:mb-16">
               <span className="inline-block font-body text-[11px] tracking-widest2 uppercase text-sand font-light mb-4 relative after:content-[''] after:absolute after:left-[calc(100%+12px)] after:top-1/2 after:w-8 after:h-px after:bg-sand/50">
@@ -395,8 +395,8 @@ export default function ServiceLayout({
       </section>
 
       {/* ═══ WHY CHOOSE US ═══ */}
-      <section className="py-16 md:py-[100px] px-6 md:px-8 bg-cream overflow-hidden">
-        <div className="max-w-[1100px] mx-auto">
+      <section className="py-16 md:py-25 px-6 md:px-8 bg-cream overflow-hidden">
+        <div className="max-w-275 mx-auto">
           <TextReveal className="mb-4">
             <p className="font-body text-[11px] tracking-widest2 uppercase text-sand font-light">
               The Difference
@@ -431,7 +431,7 @@ export default function ServiceLayout({
       </section>
 
       {/* ═══ OUR PROCESS — VERTICAL TIMELINE ═══ */}
-      <section className="py-16 md:py-[120px] px-6 md:px-8 bg-navy-deep relative overflow-hidden">
+      <section className="py-16 md:py-30 px-6 md:px-8 bg-navy-deep relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-[0.02]"
           style={{
             backgroundImage: `repeating-linear-gradient(
@@ -441,7 +441,7 @@ export default function ServiceLayout({
           }}
         />
 
-        <div className="relative z-10 max-w-[700px] mx-auto">
+        <div className="relative z-10 max-w-175 mx-auto">
           <TextReveal className="mb-4">
             <p className="font-body text-[11px] tracking-widest2 uppercase text-sand-light/50 font-light">
               Simple & Seamless
@@ -454,7 +454,7 @@ export default function ServiceLayout({
           </TextReveal>
 
           <div className="relative">
-            <div className="absolute left-[15px] md:left-[19px] top-0 bottom-0 w-px bg-white/10" />
+            <div className="absolute left-3.75 md:left-4.75 top-0 bottom-0 w-px bg-white/10" />
 
             {steps.map((s, i) => (
               <Reveal key={i} from="left" delay={i * 0.2}>
@@ -481,7 +481,7 @@ export default function ServiceLayout({
           </div>
 
           <Reveal from="bottom" delay={0.7}>
-            <div className="ml-[36px] md:ml-[56px] mt-10 md:mt-12 pt-10 md:pt-12 border-t border-white/10">
+            <div className="ml-9 md:ml-14 mt-10 md:mt-12 pt-10 md:pt-12 border-t border-white/10">
               <a
                 href="tel:4016222834"
                 className="group inline-flex items-center gap-2 md:gap-3 bg-sand text-navy-deep font-body text-[13px] md:text-[14px] font-normal tracking-widest2 uppercase px-8 py-3.5 md:px-10 md:py-4 transition-all duration-300 hover:bg-sand-light no-underline hover:shadow-[0_8px_32px_rgba(196,168,130,0.25)]"
@@ -498,8 +498,8 @@ export default function ServiceLayout({
       </section>
 
       {/* ═══ BOTTOM CTA ═══ */}
-      <section className="py-12 md:py-[80px] px-6 md:px-8 bg-cream">
-        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 text-center md:text-left">
+      <section className="py-12 md:py-20 px-6 md:px-8 bg-cream">
+        <div className="max-w-300 mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 text-center md:text-left">
           <Reveal from="left">
             <div>
               <h2 className="font-display text-[clamp(22px,3vw,36px)] font-light text-navy mb-2">

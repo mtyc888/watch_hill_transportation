@@ -137,12 +137,21 @@ export default function Home() {
         <div className="relative z-10 text-center max-w-[900px] px-6 md:px-8">
           <h1 className="sr-only">Watch Hill Transportation</h1>
 
+          {/* Logo + mobile company name lockup */}
           <FadeIn>
-            <div className="mb-6 md:mb-10">
-              <div className="w-16 h-16 md:w-24 md:h-24 mx-auto rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm bg-white/5">
-                <span className="font-display text-2xl md:text-4xl text-white/90 font-light">
+            <div className="mb-6 md:mb-10 flex flex-col items-center">
+              <div className="w-14 h-14 md:w-24 md:h-24 mx-auto rounded-full border border-white/15 flex items-center justify-center backdrop-blur-sm bg-white/5 mb-4 md:mb-0">
+                <span className="font-display text-xl md:text-4xl text-white/90 font-light">
                   W
                 </span>
+              </div>
+              {/* Mobile company name */}
+              <div className="md:hidden flex items-center gap-3 mt-1">
+                <div className="h-px w-6 bg-white/20" />
+                <p className="font-body text-[10px] tracking-widest3 uppercase text-white/50 font-light">
+                  Watch Hill Transportation
+                </p>
+                <div className="h-px w-6 bg-white/20" />
               </div>
             </div>
           </FadeIn>
@@ -171,7 +180,7 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <p className="font-body text-[15px] md:text-[17px] text-white/70 leading-relaxed max-w-[520px] mx-auto mb-8 md:mb-14 font-light">
+            <p className="font-body text-[14px] md:text-[17px] text-white/70 leading-relaxed max-w-[520px] mx-auto mb-8 md:mb-14 font-light">
               Travel confidently with premium vehicles and experienced,
               licensed and insured drivers at your service.
             </p>
@@ -186,22 +195,22 @@ export default function Home() {
               <span className="hidden sm:inline">Call or Text 401-622-2834</span>
               <span className="sm:hidden">401-622-2834</span>
             </a>
-            <p className="font-body text-[12px] text-white/40 font-light tracking-wide mt-3 md:mt-5">
+            <p className="font-body text-[11px] md:text-[12px] text-white/40 font-light tracking-wide mt-3 md:mt-5">
               For an instant quote
             </p>
           </FadeIn>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-cream to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-linear-to-t from-cream to-transparent" />
 
         <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-          <div className="w-px h-10 md:h-12 bg-gradient-to-b from-white/30 to-transparent animate-pulse" />
+          <div className="w-px h-10 md:h-12 bg-linear-to-b from-white/30 to-transparent animate-[pulse_1s_ease-in-out_infinite]" />
         </div>
       </section>
 
       {/* ── LOCATION MARQUEE ── */}
       <section className="bg-cream overflow-hidden py-4 md:py-5 border-b border-border">
-        <div className="flex animate-[marquee_40s_linear_infinite] whitespace-nowrap">
+        <div className="flex animate-[marquee_25s_linear_infinite] whitespace-nowrap">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span
               key={i}
@@ -226,8 +235,8 @@ export default function Home() {
       </section>
 
       {/* ── INTRO ── */}
-      <section className="py-16 md:py-[100px] px-6 md:px-8 bg-cream">
-        <div className="max-w-[900px] mx-auto text-center">
+      <section className="py-16 md:py-25 px-6 md:px-8 bg-cream">
+        <div className="max-w-225 mx-auto text-center">
           <FadeIn>
             <p className="font-body text-[11px] tracking-widest2 uppercase text-sand mb-4 md:mb-6 font-light">
               Welcome

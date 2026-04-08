@@ -7,6 +7,7 @@ import { MenuIcon, XIcon, PlaneIcon, CarIcon, ClockIcon, HeartIcon, ZapIcon } fr
 const links = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Fleet", href: "/fleet" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -130,7 +131,7 @@ export default function Nav() {
                     }`}
                   >
                     <div
-                      className={`w-[260px] py-3 shadow-xl border ${
+                      className={`w-65 py-3 shadow-xl border ${
                         scrolled
                           ? "bg-white border-border"
                           : "bg-navy-deep/95 backdrop-blur-md border-white/10"

@@ -106,15 +106,6 @@ export default function Fleet() {
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end overflow-hidden bg-navy-deep">
         <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src="/images/fleet/fleet-hero.jpg"
-            alt="Our Fleet"
-            fill
-            className={`object-cover transition-transform duration-[1.8s] ease-out ${
-              heroLoaded ? "scale-100" : "scale-105"
-            }`}
-            priority
-          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
 

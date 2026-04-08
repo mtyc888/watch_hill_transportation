@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
       body: JSON.stringify({
         from: "Watch Hill Contact <onboarding@resend.dev>",
-        to: "ymarvintan@gmail.com",
+        to: "Timhence5@gmail.com",
         subject: `New Inquiry: ${service} - ${name}`,
         reply_to: email,
         html: `

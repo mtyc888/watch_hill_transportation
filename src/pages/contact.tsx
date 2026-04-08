@@ -22,10 +22,31 @@ export default function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form), // 'form' state has name, email, phone, etc.
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Error sending message.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClasses =
@@ -77,7 +98,7 @@ export default function Contact() {
                   <div>
                     <p className={labelClasses}>Phone</p>
                     <p className="font-body text-base text-txt font-light">
-                      +1 (401) 555-0123
+                      +1 (401) 622-2834
                     </p>
                     <p className="font-body text-xs text-txt-muted font-light mt-0.5">
                       Available 24/7
@@ -92,7 +113,7 @@ export default function Contact() {
                   <div>
                     <p className={labelClasses}>Email</p>
                     <p className="font-body text-base text-txt font-light">
-                      bookings@watchhilltransport.com
+                      Timhence5@gmail.com
                     </p>
                     <p className="font-body text-xs text-txt-muted font-light mt-0.5">
                       We respond within the hour
@@ -104,7 +125,7 @@ export default function Contact() {
               {/* Quote card */}
               <div className="mt-12 p-8 bg-white border border-border">
                 <p className="font-display text-lg italic text-navy leading-relaxed mb-3">
-                  &ldquo;Every detail, every mile — handled with care.&rdquo;
+                  &ldquo;Every detail, every mile, handled with care.&rdquo;
                 </p>
                 <GoldDivider width={40} />
               </div>
@@ -199,8 +220,12 @@ export default function Contact() {
                       />
                     </div>
 
-                    <GoldButton onClick={handleSubmit} className="w-full">
-                      Send Message
+                    <GoldButton 
+                      onClick={handleSubmit} 
+                      className="w-full"
+                      disabled={isSubmitting} // Disable while sending
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </GoldButton>
                   </div>
                 </>

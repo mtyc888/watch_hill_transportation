@@ -141,9 +141,11 @@ export default function Home() {
           <FadeIn>
             <div className="mb-6 md:mb-10 flex flex-col items-center">
               <div className="w-14 h-14 md:w-24 md:h-24 mx-auto rounded-full border border-white/15 flex items-center justify-center backdrop-blur-sm bg-white/5 mb-4 md:mb-0">
-                <span className="font-display text-xl md:text-4xl text-white/90 font-light">
-                  W
-                </span>
+                <img
+                  src="/images/logo_watch.ico"
+                  alt="Watch Hill Transportation"
+                  className="w-8 h-8 md:w-14 md:h-14"
+                />
               </div>
               {/* Mobile company name */}
               <div className="md:hidden flex items-center gap-3 mt-1">

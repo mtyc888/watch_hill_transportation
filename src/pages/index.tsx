@@ -139,20 +139,12 @@ export default function Home() {
 
           {/* Logo + mobile company name lockup */}
           <FadeIn>
-            <div className="mb-6 md:mb-10 flex flex-col items-center">
+            <div className="mb-2 md:mb-6 flex flex-col items-center">
               <img
                 src="/images/watchhh.png"
                 alt="Watch Hill Transportation"
-                className="w-40 h-auto md:w-56 mx-auto -mb-6 md:-mb-10 object-contain"
+                className="w-40 h-auto md:w-56 mx-auto object-contain"
               />
-              {/* Mobile company name */}
-              <div className="md:hidden flex items-center gap-3 mt-1">
-                <div className="h-px w-6 bg-white/20" />
-                <p className="font-body text-[10px] tracking-widest3 uppercase text-white/50 font-light">
-                  Watch Hill Transportation
-                </p>
-                <div className="h-px w-6 bg-white/20" />
-              </div>
             </div>
           </FadeIn>
 

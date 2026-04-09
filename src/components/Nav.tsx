@@ -338,7 +338,15 @@ export default function Nav() {
             >
               Contact
             </Link>
-
+            <Link
+              href="/fleet"
+              onClick={closeMenu}
+              className={`font-display text-[36px] font-light tracking-widest no-underline ${
+                router.pathname === "/fleet" ? "text-navy" : "text-slate"
+              }`}
+            >
+              Fleet
+            </Link>
             <div
               className="transition-all duration-500"
               style={{

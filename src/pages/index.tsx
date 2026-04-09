@@ -142,9 +142,9 @@ export default function Home() {
             <div className="mb-6 md:mb-10 flex flex-col items-center">
               <div className="w-20 h-20 md:w-32 md:h-32 mx-auto rounded-full border border-white/15 flex items-center justify-center backdrop-blur-sm bg-white/5 mb-4 md:mb-0">
                 <img
-                  src="/images/watchhh.png"
+                  src="/images/logo_watch.ico"
                   alt="Watch Hill Transportation"
-                  className="w-14 h-14 md:w-24 md:h-24"
+                  className="w-32 h-32 md:w-48 md:h-48 mx-auto mb-4 md:mb-0"
                 />
               </div>
               {/* Mobile company name */}

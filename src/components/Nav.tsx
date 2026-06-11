@@ -7,7 +7,6 @@ import { MenuIcon, XIcon, PlaneIcon, CarIcon, ClockIcon, HeartIcon, ZapIcon } fr
 const links = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Fleet", href: "/fleet" },
   { label: "Contact", href: "/contact" },
 ];
 
